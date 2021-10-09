@@ -1,0 +1,18 @@
+<div *ngIf="lastHouse" class="first-row">
+  <h2>Ostatnio zarezerwowany dom:</h2>
+  <div class="card-container">
+    <app-house-card [house]="lastHouse"></app-house-card>
+  </div>
+</div>
+<div class="main-container">
+  <div class="row">
+    <button (click)="showAll()">Wyświetl wszystkie</button>
+    <button (click)="showAbove900()">Wyświetl powyżej 900 tys.</button>
+    <button (click)="showUnder700()">Wyświetl poniżej 700 tys.</button>
+  </div>
+  <app-house-card class="card-container" *ngFor="let house of housesToDisplay"
+                  [house]="house"
+                  [highlight]="house?.id === lastHouse?.id"
+                  (houseReserved)="onHouseReserved($event)">
+  </app-house-card>
+</div>

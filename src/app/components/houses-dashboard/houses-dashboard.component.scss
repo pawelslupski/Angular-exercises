@@ -1,0 +1,18 @@
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.first-row {
+  min-width: 100%;
+}
+
+.row {
+  display: flex;
+  min-width: 100%;
+  justify-content: center;
+}
+
+.card-container {
+  width: 20%;
+}
