@@ -1,10 +1,29 @@
 .card {
-  padding: 10px;
   margin: 15px;
-  border-radius: 10px;
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.7);
+  border-radius: 10px;
 }
 
-.card-green {
-  box-shadow: 0 0 5px 0 rgba(50,205,50,0.7);
+.card img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.info-box {
+  padding: 10px;
+}
+
+button {
+  border: none;
+  background-color: #000133;
+  color: white;
+  height: 38px;
+  width: 110px;
+  font-weight: 700;
+  display: table-cell;
+  vertical-align: center;
+  border-radius: 10px;
+  cursor: pointer;
 }

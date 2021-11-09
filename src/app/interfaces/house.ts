@@ -4,6 +4,7 @@ export interface House {
   id: number,
   price: number,
   area: string,
+  imageUrl: string,
   status: Status,
   address: Address
 }

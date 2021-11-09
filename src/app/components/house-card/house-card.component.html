@@ -1,7 +1,11 @@
 <div class="card" [ngClass]="borderClass">
-  <p>Miejscowość: {{house?.address?.city}}</p>
-  <p>Adres: {{addressAsOneLine}}</p>
-  <p>Powierzchnia: {{house?.area}}</p>
-  <p>Cena: {{house?.price}}</p>
-  <button (click)="book()">Zarezerwuj</button>
+  <img [src]="house?.imageUrl"/>
+  <div class="info-box">
+    <p>Miejscowość: {{house?.address?.city}}</p>
+    <p>Adres: {{addressAsOneLine}}</p>
+    <p>Powierzchnia: {{house?.area}}</p>
+    <p>Cena: {{house?.price}}</p>
+    <p>Status: <span highlightStatus>{{house?.status | statusTranslate}}</span></p>
+    <button (click)="book()">Zarezerwuj</button>
+  </div>
 </div>
