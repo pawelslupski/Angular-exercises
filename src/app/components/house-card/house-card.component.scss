@@ -15,6 +15,26 @@
   padding: 10px;
 }
 
+.additional-img-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.additional-img-box img {
+  height: 100px;
+  width: calc(33.3% - 20px);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 button {
   border: none;
   background-color: #000133;

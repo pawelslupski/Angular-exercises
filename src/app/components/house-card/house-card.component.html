@@ -1,11 +1,18 @@
-<div class="card" [ngClass]="borderClass">
-  <img [src]="house?.imageUrl"/>
+<div class="card">
+  <img [src]="house?.imageUrls?.[0]"/>
   <div class="info-box">
     <p>Miejscowość: {{house?.address?.city}}</p>
     <p>Adres: {{addressAsOneLine}}</p>
     <p>Powierzchnia: {{house?.area}}</p>
     <p>Cena: {{house?.price}}</p>
     <p>Status: <span highlightStatus>{{house?.status | statusTranslate}}</span></p>
-    <button (click)="book()">Zarezerwuj</button>
+    <div class="additional-img-box" *ngIf="expandView">
+      <img *ngFor="let image of houseImagesToBeDisplayed | slice:1; let i = index" [src]="houseImagesToBeDisplayed?.[i+1]"/>
+    </div>
+
+    <div class="button-wrapper">
+      <button (click)="book()">Zarezerwuj</button>
+      <button *ngIf="houseImagesToBeDisplayed && houseImagesToBeDisplayed.length > 1" (click)="toggleAdditionalView()">{{buttonText}}</button>
+    </div>
   </div>
 </div>

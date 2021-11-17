@@ -15,7 +15,10 @@ export class HouseService {
         id: 1,
         price: 250000,
         area: '50m2',
-        imageUrl: 'https://www.szkolaangulara.pl/wp-content/uploads/2021/10/manor-house-g8e5afa906_1280.jpg',
+        imageUrls: ['https://www.szkolaangulara.pl/wp-content/uploads/2021/10/manor-house-g8e5afa906_1280.jpg',
+                    'https://www.szkolaangulara.pl/wp-content/uploads/2021/10/pexels-pixabay-259962.jpg',
+                    'https://www.szkolaangulara.pl/wp-content/uploads/2021/10/pexels-pixabay-275484.jpg',
+                    'https://www.szkolaangulara.pl/wp-content/uploads/2021/10/pexels-pixabay-271624.jpg'],
         status: Status.FOR_RENT,
         address: {
           street: 'Piłsudzkiego',
@@ -27,7 +30,7 @@ export class HouseService {
         id: 2,
         price: 275000,
         area: '75m2',
-        imageUrl: 'https://www.szkolaangulara.pl/wp-content/uploads/2021/10/casting-horn-g100df2f90_1280.jpg',
+        imageUrls: ['https://www.szkolaangulara.pl/wp-content/uploads/2021/10/casting-horn-g100df2f90_1280.jpg'],
         status: Status.FOR_SALE,
         address: {
           street: 'Wyszyńskiego',
@@ -39,7 +42,9 @@ export class HouseService {
         id: 3,
         price: 902000,
         area: '102m2',
-        imageUrl: 'https://www.szkolaangulara.pl/wp-content/uploads/2021/10/sweden-g1cdf6280b_1280.jpg',
+        imageUrls: ['https://www.szkolaangulara.pl/wp-content/uploads/2021/10/sweden-g1cdf6280b_1280.jpg',
+                    'https://www.szkolaangulara.pl/wp-content/uploads/2021/10/pexels-terry-magallanes-2635038.jpg',
+                    'https://www.szkolaangulara.pl/wp-content/uploads/2021/10/pexels-pixabay-276724.jpg'],
         status: Status.SOLD,
         address: {
           street: 'Łukasińskiego',
@@ -51,7 +56,7 @@ export class HouseService {
         id: 4,
         price: 945000,
         area: '145m2',
-        imageUrl: 'https://www.szkolaangulara.pl/wp-content/uploads/2021/10/casting-horn-gc96bbd46c_1280.jpg',
+        imageUrls: ['https://www.szkolaangulara.pl/wp-content/uploads/2021/10/casting-horn-gc96bbd46c_1280.jpg'],
         status: Status.RESERVED,
         address: {
           street: 'Stoczniowa',
@@ -63,7 +68,7 @@ export class HouseService {
         id: 5,
         price: 975000,
         area: '179m2',
-        imageUrl: 'https://www.szkolaangulara.pl/wp-content/uploads/2021/10/mill-gc68dfce5c_1280.jpg',
+        imageUrls: ['https://www.szkolaangulara.pl/wp-content/uploads/2021/10/mill-gc68dfce5c_1280.jpg'],
         status: Status.RENTED,
         address: {
           street: 'Marynarska',
@@ -72,5 +77,4 @@ export class HouseService {
         }
       }];
   }
-
 }
