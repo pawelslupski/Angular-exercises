@@ -1,15 +1,17 @@
 import {
-  Component,
+  Component, ComponentRef,
   ElementRef,
   EventEmitter,
   Input,
   OnChanges,
   OnInit,
   Output,
-  SimpleChanges,
+  SimpleChanges, Type,
   ViewChild
 } from '@angular/core';
 import {House} from "../../interfaces/house";
+import {DialogService} from "../../services/dialog.service";
+import {HouseCardDialogComponent} from "./house-card-dialog/house-card-dialog.component";
 
 @Component({
   selector: 'app-house-card',
@@ -26,7 +28,9 @@ export class HouseCardComponent implements OnInit, OnChanges {
   public buttonText: string = 'Więcej zdjęć';
   public houseImagesToBeDisplayed: string[] | undefined;
 
-  constructor() { }
+  constructor(private dialogService: DialogService) {
+
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes && changes.highlight) {
@@ -54,5 +58,11 @@ export class HouseCardComponent implements OnInit, OnChanges {
     } else {
       this.buttonText = 'Więcej zdjęć';
     }
+  }
+
+  public displayDialog(houseImageUrl: string | undefined) {
+      const childComponent: ComponentRef<HouseCardDialogComponent>= <ComponentRef<HouseCardDialogComponent>><unknown>this.dialogService.openDialog(HouseCardDialogComponent);
+      // @ts-ignore
+      childComponent?.instance.houseImageUrl = houseImageUrl;
   }
 }

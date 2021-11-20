@@ -7,8 +7,9 @@
     <p>Cena: {{house?.price}}</p>
     <p>Status: <span highlightStatus>{{house?.status | statusTranslate}}</span></p>
     <div class="additional-img-box" *ngIf="expandView">
-      <img *ngFor="let image of houseImagesToBeDisplayed | slice:1; let i = index" [src]="houseImagesToBeDisplayed?.[i+1]"/>
+      <img *ngFor="let image of houseImagesToBeDisplayed | slice:1; let i = index" [src]="houseImagesToBeDisplayed?.[i+1]" (click)="displayDialog(houseImagesToBeDisplayed?.[i+1])"/>
     </div>
+    <app-dialog *ngIf="false"></app-dialog>
 
     <div class="button-wrapper">
       <button (click)="book()">Zarezerwuj</button>

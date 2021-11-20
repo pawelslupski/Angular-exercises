@@ -9,6 +9,8 @@ import { HouseCardComponent } from './components/house-card/house-card.component
 import { HousesDashboardComponent } from './components/houses-dashboard/houses-dashboard.component';
 import { HighlightStatusDirective } from './shared/highlight-status.directive';
 import {StatusTranslatePipe} from "./shared/polish-translate.pipe";
+import { DialogComponent } from './shared/components/dialog/dialog.component';
+import { HouseCardDialogComponent } from './components/house-card/house-card-dialog/house-card-dialog.component';
 
 registerLocaleData(localePL);
 
@@ -18,7 +20,9 @@ registerLocaleData(localePL);
     HouseCardComponent,
     HousesDashboardComponent,
     HighlightStatusDirective,
-    StatusTranslatePipe
+    StatusTranslatePipe,
+    DialogComponent,
+    HouseCardDialogComponent
   ],
   imports: [
     BrowserModule,
